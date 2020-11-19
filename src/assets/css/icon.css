@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+    src: url('//at.alicdn.com/t/font_2215416_4y43ctwu5vj.eot?t=1605782118917'); /* IE9 */
+    src: url('//at.alicdn.com/t/font_2215416_4y43ctwu5vj.eot?t=1605782118917#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAALoAAsAAAAABrgAAAKZAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCfgqBLIEqATYCJAMMCwgABCAFhG0HMxvlBciuMG7hiYCgunGswLWCT9SQwJwgHv47Rn/fzGxlYOTxpaUfTdEUZVX0wUKgRL+3wP7vmqZAA9R9LwNFJTdAVKWfO869NNd2jsiONYKfcJtQpIF74Qt5XQuM7NXrgVbzf/3jY8Hd57mc3gQ6kPmBzm01l81Ndz0fEzDBAPeyosiKKDFuGLvAJdwnUGtQBctBe+8ociusZYG4LAkR5M5lFYU1qoXKmr1FvFGhOj1ND3gdfj/+Ww03SUVmrT281BZHjb8Ks8ePnPAJOQI8XIGMeUghjmqrh2yCcTa1VbtxaF/Tgl+eX/n/eEJBEkQly1oPppEr3ZHuaqkHNO7YmkFlbFqAbLD87WPPiIaGtjbXO5Pbc1+ed5hbs6ecQDsvXPb5cVdqZ+NuxkG7OL2dkfHsQwdsbfC52ys3cOo9tVo/DrQGAU+Zm963Wj/lNfQcqnny1o8uan+a+X3OKv0LlyP33rvSThRm/Uye5Ajyj/QmENy487+5tbsp4OcVEgaLfmaqJXrr/03vOVB0mxXJRdVczYxnvSMrCbV6wjEr2ep1vL/j/uqhWkeKpMoAsmrjZGHnUaHOOipV20atOR2H67RhbKLUYNYSQGh2jaTRV2TNHsnCvqBCp29Uag4bah1F4Zl1JkPKaGEQ4RDH0RksxahOnBjPiJqHQTDVCMvaQn4cWEIq4KAvUGx0gA5sjg2JpBDinGDCqIbbwWOgqhQbjMoQ4z6Rc6Pa7yd1b/LFqIYy7GNABAfisKgZmCSG0hF/PJdR+vwwIDCpIlhLS005DjAJ0uRYkE+gB9nh1nu13MsrCUmCEI4jMIKhNFg7mAVUKgoz6mfJQAznI44oG6r57VGkr9u3vlf7gCrrwLoiR4ocRT5vUlvclBACAAAA') format('woff2'),
+    url('//at.alicdn.com/t/font_2215416_4y43ctwu5vj.woff?t=1605782118917') format('woff'),
+    url('//at.alicdn.com/t/font_2215416_4y43ctwu5vj.ttf?t=1605782118917') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('//at.alicdn.com/t/font_2215416_4y43ctwu5vj.svg?t=1605782118917#iconfont') format('svg'); /* iOS 4.1- */
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-cuo:before {
+    content: "\e63f";
+    font-size: 24px;
+    color: #B0B0B0;
+  }
+  
+  .icon-dui:before {
+    content: "\e63e";
+    color: #2d6b31;
+    font-size: 24px;
+  }
+  
