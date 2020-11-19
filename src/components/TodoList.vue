@@ -2,18 +2,24 @@
     <div id="todo-list">
         <input type="text" name="" id="" @keydown.enter="addList" v-model="inputContent">
         <ul>
-            <li v-for="item in todoList" :key="item.id" :class="{'completed':item.status}">
-                {{item.content}}
-                <button class="delete-btn" @click="deleteTodo(item.id)">删除</button>
-                <button class="complete-btn" @click="completeTodo(item.id)">完成</button>
-            </li>
+            <todo-item 
+                v-for="todo in todoList" 
+                :key="todo.id" 
+                :todo = 'todo' 
+                @deleteTodo='deleteTodo' 
+                @completeTodo='completeTodo'>
+            </todo-item>
         </ul>
     </div>
 </template>
 
 <script>
+import TodoItem from './TodoItem'
 export default {
     name : 'TodoList',
+    components:{
+        TodoItem
+    },
     data() {
         return {
             inputContent : '',
@@ -35,7 +41,6 @@ export default {
                 content : this.inputContent,
                 status : false
             }
-            console.log(newTodo);
             this.todoList.push(newTodo)
             this.inputContent = ''
         },
@@ -50,13 +55,13 @@ export default {
             return (year + month + day + hour + minute + second + num)
         },
         deleteTodo(id){
+
             this.todoList = this.todoList.filter((item) => {
                 return item.id !== id
             })
         },
         completeTodo(id){
             this.todoList.forEach((item) => {
-                console.log('ok');
                 if(item.id === id){
                     item.status = !item.status
                 }
@@ -77,18 +82,9 @@ export default {
         border: 1px tomato solid;
         padding: 5px;
     }
-    .completed{
-        text-decoration: line-through;
-    }
+    
     ul li{
         position: relative;
     }
-    .delete-btn{
-        position: absolute;
-        right: 0;
-    }
-    .complete-btn{
-        position: absolute;
-        right: 50px 
-    }
+    
 </style>
