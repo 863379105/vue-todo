@@ -35,6 +35,7 @@
     }
     .completed{
         text-decoration: line-through;
+        color: #B0B0B0;
     }
     .wrapper{
         position: relative;
