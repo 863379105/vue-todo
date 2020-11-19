@@ -2,7 +2,10 @@
     <div id="todo-list">
         <input type="text" name="" id="" @keydown.enter="addList" v-model="inputContent">
         <ul>
-            <li v-for="item in todoList" :key="item.id">{{item}}</li>
+            <li v-for="item in todoList" :key="item.id">
+                {{item}}
+                <button @click="deleteTodo(item.id)">删除</button>
+            </li>
         </ul>
     </div>
 </template>
@@ -30,6 +33,7 @@ export default {
             }
             console.log(newTodo);
             this.todoList.push(newTodo)
+            this.inputContent = ''
         },
         getTodoId(){
             let year = new Date().getFullYear().toString()
@@ -40,6 +44,11 @@ export default {
             let second = new Date().getSeconds().toString()
             let num = Math.ceil(Math.random() * 100000).toString()
             return (year + month + day + hour + minute + second + num)
+        },
+        deleteTodo(id){
+            this.todoList = this.todoList.filter((item) => {
+                return item.id !== id
+            })
         }
     }
 }
