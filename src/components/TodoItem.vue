@@ -43,18 +43,18 @@
     li{
         list-style: none;
         display: block;
-        width: 85%;
+        width: 90%;
         height: 50px;
         line-height: 50px;
-        font-size: 25px;
+        font-size: 18px;
         float: right;
         margin-right: 20px;
         color: #555555;
         font-weight: lighter;
     }
     .confirm-btn{
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
         border-radius: 100%;
         position: absolute;
         left: 20px;

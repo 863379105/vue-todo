@@ -6,8 +6,8 @@
                 <i class="iconfont icon-dui" :class="{'element-dis':!allChecked}"></i>
             </div>
             <input type="text" name="" id="" 
-                maxlength="25"
-                @keydown.enter="addList" 
+                maxlength="30"
+                v-on:keydown.enter="addList" 
                 v-model="inputContent" 
                 @focus = "clearMsg" 
                 @blur="showMsg" 
@@ -93,12 +93,17 @@ export default {
             this.allChecked = !this.allChecked
         },
         clearMsg(){
-            this.inputContent = '',
-            this.isDefaultMsg = false
+            if(this.inputContent === 'What need to be done?'){
+                this.inputContent = '',
+                this.isDefaultMsg = false
+            }
         },
         showMsg(){
-            this.inputContent = 'What need to be done?'
-            this.isDefaultMsg = true
+            if(this.inputContent === ''){
+                this.inputContent = 'What need to be done?'
+                this.isDefaultMsg = true
+            }
+            
         }
     }
 }
@@ -128,7 +133,7 @@ export default {
         clear: both;
     }
     #todo-list{
-        width: 40%;
+        width: 60%;
         margin: 30px auto;
         position: relative;
         background-color: rgb(255, 255, 255);
@@ -143,21 +148,22 @@ export default {
         border:none;
         outline: none;
         display: block;
-        width: 85%;
+        width: 90%;
         position: absolute;
         right: 20px;
         top:50%;
         transform:translateY(-50%);
         height: 50px;
         line-height: 50px;
-        font-size: 25px;
+        font-size: 18px;
+        color: #B0B0B0;
     }
     article{
         position: relative;
     }
     .confirm-btn{
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
         border-radius: 100%;
         position: absolute;
         left: 20px;
